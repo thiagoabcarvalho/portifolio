@@ -20,7 +20,12 @@
   
   /* fonte */
   --font--color: #393e46;
-
+  --size--headline: 7.8em;
+  --size--subhead: 5.7em;
+  --size--subhead2: 4em;
+  --size--body: 1.8em;
+  --size--botton: 2.0em;
+  --size--nav: 3em;
 }
 
 * {
@@ -33,7 +38,7 @@
 body,
 html {  
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: 62.5%; /*10px*/
 }
 
 ul {
@@ -62,10 +67,15 @@ ul {
 }
 
 .btn__hero {
+  border: 2px solid  var(--emphasis--color);
+  color: var(--emphasis--color);
+  font-size: var(--size--botton);  
+}
+
+.btn__hero:hover {
   background-color: var(--emphasis--color);
   color: var(--secundary--color);
-  font-size: 1rem;  
-}
+} 
 
 .header__menu {  
   grid-column: 2;
@@ -77,6 +87,10 @@ ul {
   background-color: var(--background--primary);
   box-shadow: 0 4px 12px -8px var(--primary--color);  
   position: fixed;  
+}
+
+.header__menu__list {
+  font-size: var(--size--nav);
 }
 
 .header__menu__item__link {
@@ -114,12 +128,8 @@ ul {
   display: grid;
   grid-template-columns: var(--grid--container);
   grid-template-rows: 50px 800px repeat(10, auto);
-   
-  
 }
-.hero__image__photo {
-  
-}
+
 .hero__image {
   grid-column: 2 / 3;
   grid-row: 2 / 4;  
@@ -131,6 +141,7 @@ ul {
 }
 
 .hero__image__text {
+  margin: 150px 0 0 115px;
   grid-row: 2 / 4;  
   max-width: 550px;
   display: flex;
@@ -139,15 +150,39 @@ ul {
   justify-content: center;
 }
 
+.hero__image__text__title {
+  font-size: var(--size--headline);
+  color: var(--emphasis--color);
+}
+
 .hero__image__text__item {
+  font-size: var(--size--subhead2);
+  color: var(--font--color);
   padding: 10px 0 5px 0;
 }
 
+.btn__hero {
+  margin: 32px 0 0 115px;
+}
+
+/* ***SOBRE*** */
 
 .about { 
   grid-column: 2 / 3;
   grid-row: 4 / 6;
   padding: 3rem 0;
+  margin-top: 64px; /* FAZER A TROCA POR rem*/
+}
+
+.about__item--title {
+  font-size: var(--size--headline);
+  color: var(--emphasis--color);
+}
+
+.about__item--text {
+  font-size: var(--size--subhead2);
+  color: var(--font--color);
+  margin: 11px 0 32px 0;
 }
 
 /* SOFT SKILL */
@@ -167,6 +202,12 @@ ul {
   text-align: center; 
 }
 
+.icon-bullhorn::before,
+.icon-embed2::before,
+.icon-stack::before {
+  font-size: 5.9em;
+}
+
 .card__skill__list__item {
   text-decoration: none;
   list-style: none;
@@ -178,11 +219,17 @@ ul {
 }
 
 .card__skill__list--title {
-  color: var(--font--color);  
+  margin: 32px 0 9px 0;
+  color: var(--emphasis--color);
+  font-size: var(--size--subhead2);  
+  font-family: 'Roboto', sans-serif;
 }
 
 .card__skill__list--text {
+  margin-bottom: 32px;
+  font-family: 'Roboto', sans-serif;
   color: var(--font--color);
+  font-size: var(--size--subhead2);
   flex-grow: 1;
 }
 
