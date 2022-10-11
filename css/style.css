@@ -5,6 +5,8 @@
   --secundary--color: #fff; 
   --emphasis--color: #fd7014;
 
+  --input--color: #9c9c9c;
+
   /* background */
   --background--primary: #eeeeee;
   --background--secundary: #c7c7c7;
@@ -49,6 +51,7 @@ ul {
   cursor: pointer;
   padding: 18px 32px;
   border-radius: 15px;
+  font-family: 'Roboto', sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1.5px;
@@ -113,13 +116,9 @@ ul {
 .container__about {
   display: grid;
   grid-template-columns: var(--grid--container);
-  grid-template-rows: 50px 800px repeat(10, auto);
-   
-  
+  grid-template-rows: 50px 800px repeat(10, auto);     
 }
-.hero__image__photo {
-  
-}
+
 .hero__image {
   grid-column: 2 / 3;
   grid-row: 2 / 4;  
@@ -186,35 +185,110 @@ ul {
   flex-grow: 1;
 }
 
-/* FORMULÁRIO */
-
-.forms {
-  grid-column: 2 / 3;
-  grid-row: 7 / 8;
-}
-
-.forms_contact {  
-  width: 50%;    
-}
-
-.btn__form {
-  background-color: var(--primary--color);
-  color: var(--background--primary);
-}
 
 /* EMPRESAS */
 
 .company {
   grid-column: 2 / 3;
+  grid-row: 7 / 8;
+}
+
+/* CLIENTES */
+
+.client {
+  grid-column: 2 / 3;
   grid-row: 8 / 9;
 }
+
+.client__testimonal {
+  display: flex;  
+}
+
+/* FORMULÁRIO */
+
+.forms {
+  margin-top: 64px;
+  grid-column: 2 / 3;
+  grid-row: 9 / 10;
+  display: flex;
+  justify-content: space-between;
+}
+
+.forms__maps--img {
+  width: 676px;
+  height: auto;
+}
+
+.forms__contact--title {
+  color: var(--font--color);
+  font-size: 2em;
+}
+
+.forms_contact__input--label {
+  color: var(--font--color);
+  margin: 30px 0 5px;  
+  font-size: 1.5em;
+}
+
+.forms_contact__input {
+  width: 478px;
+  height: 58px;
+  border: solid 2px var(--font--color);
+  padding: 15px;
+}
+
+.forms_contact__input::placeholder {
+  font-family: 'Roboto', sans-serif;
+  color: var(--input--color);
+  font-size: 1.2em; 
+}
+.forms_contact__input:focus {
+  outline: none;
+  border: solid 2px var(--emphasis--color);
+  border-radius: 5px;
+}
+
+.text__msg {  
+  height: 300px;
+}
+
+.forms_contact {
+  display: flex;
+  flex-direction: column;
+  padding-left: 113px;  
+  width: 50%;
+}
+
+.btn__form {
+  width: 478px;  
+  background-color: var(--emphasis--color);
+  color: var(--background--primary);
+  font-size: 1em;
+  margin-top: 25px;
+}
+
+.btn__form:hover {
+  background-color: var(--background--secundary);
+}
+
+.btn_clear {
+  background-color: transparent;
+  color: var(--emphasis--color);
+}
+
+.btn_clear:hover {
+  background-color: transparent;
+  /* text-decoration: 1px underline; */
+  text-decoration: underline solid var(--background--secundary) 2px;
+}
+
 
 
 /* FOOTER */
 
 footer {
   grid-column: 2 / 3;
-  grid-row: 9 / 10;
+  grid-row: 10 / 11;
 
 }
 
