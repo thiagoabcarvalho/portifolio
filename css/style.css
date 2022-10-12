@@ -22,12 +22,13 @@
   
   /* fonte */
   --font--color: #393e46;
-  --size--headline: 7.8em;
-  --size--subhead: 5.7em;
-  --size--subhead2: 4em;
-  --size--body: 1.8em;
-  --size--botton: 2.0em;
-  --size--nav: 3em;
+  --size--headline: 4rem;
+  --size--subhead: 2.3rem;
+  --size--body: 1.8rem;
+  --size--botton: 1.5rem;
+  --size--label: 2rem;
+  
+    
 }
 
 * {
@@ -48,6 +49,11 @@ ul {
   list-style: none;
   justify-content: flex-end;  
   text-decoration: none;
+}
+
+h2 {
+  color: var(--emphasis--color);
+  font-size: var(--size--headline);
 }
 
 .btn__default {
@@ -93,7 +99,7 @@ ul {
 }
 
 .header__menu__list {
-  font-size: var(--size--nav);
+  font-size: var(--size--subhead);
 }
 
 .header__menu__item__link {
@@ -127,16 +133,13 @@ ul {
 }
 
 /* FOTO */
+
 .container__about {
   display: grid;
   grid-template-columns: var(--grid--container);
   grid-template-rows: 50px 800px repeat(10, auto);
-   
-  
 }
-.hero__image__photo {
-  
-}
+
 .hero__image {
   grid-column: 2 / 3;
   grid-row: 2 / 4;  
@@ -157,13 +160,9 @@ ul {
   justify-content: center;
 }
 
-.hero__image__text__title {
-  font-size: var(--size--headline);
-  color: var(--emphasis--color);
-}
 
 .hero__image__text__item {
-  font-size: var(--size--subhead2);
+  font-size: var(--size--subhead);
   color: var(--font--color);
   padding: 10px 0 5px 0;
 }
@@ -181,13 +180,9 @@ ul {
   margin-top: 64px; /* FAZER A TROCA POR rem*/
 }
 
-.about__item--title {
-  font-size: var(--size--headline);
-  color: var(--emphasis--color);
-}
 
 .about__item--text {
-  font-size: var(--size--subhead2);
+  font-size: var(--size--subhead);
   color: var(--font--color);
   margin: 11px 0 32px 0;
 }
@@ -228,7 +223,7 @@ ul {
 .card__skill__list--title {
   margin: 32px 0 9px 0;
   color: var(--emphasis--color);
-  font-size: var(--size--subhead2);  
+  font-size: var(--size--subhead);  
   font-family: 'Roboto', sans-serif;
 }
 
@@ -236,7 +231,7 @@ ul {
   margin-bottom: 32px;
   font-family: 'Roboto', sans-serif;
   color: var(--font--color);
-  font-size: var(--size--subhead2);
+  font-size: var(--size--subhead);
   flex-grow: 1;
 }
 
@@ -244,29 +239,93 @@ ul {
 /* EMPRESAS */
 
 .company {
+  margin-top: 64px;
   grid-column: 2 / 3;
   grid-row: 7 / 8;
 }
 
+.company__item__info--text {
+  margin-top: 11px;
+  font-size: var(--size--subhead);
+  color: var(--font--color);
+}
+
+.company__item__icon {
+  display: flex;
+  justify-content: space-between;
+}
+
+.company__item__icon--logo {
+  margin-top: 64px;
+  width: 160px;
+  height: 179px;
+  background-color: var(--emphasis--color);
+}
+
+
 /* CLIENTES */
 
 .client {
+  margin-top: 64px;
   grid-column: 2 / 3;
   grid-row: 8 / 9;
 }
 
-.client__testimonal {
-  display: flex;  
+.client__description__text {
+  margin-top: 11px;
+  font-size: var(--size--subhead);
+  color: var(--font--color);
 }
+
+.client__testimonal {
+  margin-top: 100px; /* verificar essa margin*/
+  display: flex;
+  justify-content: space-around;  
+}
+
+.client__testimonial__item {
+  width: 274px;
+  height: 300px;
+  background-color: var(--emphasis--color);
+  border-radius: 15px;
+}
+
+.client__testimonial__img {
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  position: relative;
+  left: 87px;
+  bottom: 50px;
+}
+
+.client__testimonial__name {
+  display: inline-block;  
+  font-size: var(--size--subhead);
+  color: var(--font--color);
+  padding: 20px;
+}
+
+.client__testimonial__text {
+  width: 274px;
+  height: 165px;
+  background-color: var(--background--secundary);
+  font-size: var(--size--botton);
+  border-radius: 18px 12px 0px 13px;
+  padding: 15px;
+}
+
+
 
 /* FORMULÁRIO */
 
 .forms {
-  margin-top: 64px;
+  
+  margin-top: 164px;
   grid-column: 2 / 3;
   grid-row: 9 / 10;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between;  
 }
 
 .forms__maps--img {
@@ -274,15 +333,10 @@ ul {
   height: auto;
 }
 
-.forms__contact--title {
-  color: var(--font--color);
-  font-size: 2em;
-}
-
 .forms_contact__input--label {
   color: var(--font--color);
   margin: 30px 0 5px;  
-  font-size: 1.5em;
+  font-size: var(--size--label);
 }
 
 .forms_contact__input {
@@ -295,7 +349,7 @@ ul {
 .forms_contact__input::placeholder {
   font-family: 'Roboto', sans-serif;
   color: var(--input--color);
-  font-size: 1.2em; 
+  font-size: var(--size--body); 
 }
 .forms_contact__input:focus {
   outline: none;
@@ -307,7 +361,7 @@ ul {
   height: 300px;
 }
 
-.forms_contact {
+.forms_contact {  
   display: flex;
   flex-direction: column;
   padding-left: 113px;  
@@ -318,7 +372,7 @@ ul {
   width: 478px;  
   background-color: var(--emphasis--color);
   color: var(--background--primary);
-  font-size: 1em;
+  font-size: var(--size--botton);
   margin-top: 25px;
 }
 
@@ -333,17 +387,83 @@ ul {
 
 .btn_clear:hover {
   background-color: transparent;
-  /* text-decoration: 1px underline; */
-  text-decoration: underline solid var(--background--secundary) 2px;
+  text-decoration: underline solid var(--emphasis--color) 2px;
 }
 
 
 
 /* FOOTER */
 
-footer {
+footer {  
+  
+  background-color: var(--background--secundary);
+}
+
+.footer__nav {
+  height: 420px;
   grid-column: 2 / 3;
   grid-row: 10 / 11;
 
+}
+
+.footer__nav__menu {
+  margin-top: 120px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;  
+}
+
+.footer__nav__menu img {
+  margin-left: 80px;
+}
+
+.footer__nav__menu__list_contact {
+  grid-column: 2 /3;
+}
+
+.footer__nav__menu__list__project {
+  grid-column: 3/4;
+}
+
+.footer__nav__menu__list__company {
+  grid-column: 4/5;
+}
+
+.footer__nav__menu__list_contact,
+.footer__nav__menu__list__project,
+.footer__nav__menu__list__company {
+  display: inline-block;
+  list-style: none;
+  font-size: var(--size--label);  
+}
+
+.footer__emphasis {
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: var(--emphasis--color);
+}
+
+.footer__nav__icon span {
+  font-size: var(--size--botton);
+}
+
+.footer__nav__icon__list {
+  padding: 20px;
+  font-size: var(--size--label);
+}
+
+.footer__nav__icon__list a{  
+  padding: 15px;  
+}
+
+.footer__nav__icon__list__item {  
+  text-decoration: none;  
+  color: var(--font--color);
+  font-size: var(--size--subhead);
+  
+}
+
+.footer__nav__icon__list__item:hover {
+  color: var(--emphasis--color);
+  font-size: 30px;  
 }
 

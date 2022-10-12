@@ -62,7 +62,7 @@
       </article>
 
       <article class="about__item">
-        <h1 class="about__item--title">Habilidades</h1>
+        <h2 class="about__item--title">Habilidades</h2>
         <p class="about__item--text">Deleniti ipsa odit veniam accusantium natus dignissimos cum ullam optio,
           corporis sed enim vel. Sunt maxime at ratione voluptatibus eum veritatis aperiam iure praesentium
           asperiores quaerat quia rem, voluptates ipsa placeat dignissimos et soluta officiis. Placeat, quae?
@@ -104,10 +104,10 @@
         </p>
       </div>
       <div class="company__item__icon">
-        <a href="#" class="company__item--icon">código café</a>
-        <a href="#" class="company__item--icon">stalebu</a>
-        <a href="#" class="company__item--icon">FidemBR</a>
-        <a href="#" class="company__item--icon">Monaco</a>
+        <a href="#" class="company__item__icon--logo">código café</a>
+        <a href="#" class="company__item__icon--logo">stalebu</a>
+        <a href="#" class="company__item__icon--logo">FidemBR</a>
+        <a href="#" class="company__item__icon--logo">Monaco</a>
       </div>
     </section>
 
@@ -122,6 +122,7 @@
       <div class="client__testimonal">
         <div class="client__testimonial__item">
           <img class="client__testimonial__img" src="./img/cliente.jpg" alt="foto de perfil dos clientes">
+          <!-- <span class="client__frame"></span> -->
           <span class="client__testimonial__name">Thiago Carvalho</span>
           <p class="client__testimonial__text">
             Este é um depoimento para colocar as experiências dos clientes atendidos por mim!
@@ -174,7 +175,7 @@
         <textarea class="forms_contact__input text__msg" name="mensagem" id="mensagem" placeholder="Digite aqui sua mensagem" cols="50" rows="10"></textarea>
 
         <button class="btn__default btn__form">enviar</button>
-        <button class="btn__default btn__form btn_clear">limpar</button>
+        <button class="btn__default btn__form btn_clear">limpar formulário</button>
 
         <address class="place">
           <p class="place__district">Santana, São Paulo-SP</p>
@@ -187,14 +188,38 @@
     </section>
 
 
-    <footer>
+    <footer class="footer__nav">
+      <div class="footer__nav__menu">
+        <img src="./img/brasil.png" style="width: 58px; height: auto" alt="bandeira nacional Brasileira">
+        <ul class="footer__nav__menu__list_contact">
+          <li class="footer__nav__manu__list__item footer__emphasis">Designer</li>
+          <li class="footer__nav__manu__list__item"> <a class="nav__menu__item"  href="#"></a> Sobre</li>
+          <li class="footer__nav__manu__list__item"> <a class="nav__menu__item"  href="#"></a> Contato</li>
+        </ul>
+
+        <ul class="footer__nav__menu__list__project">
+          <li class="footer__nav__menu__list__item footer__emphasis">Projetos</li>
+          <li class="footer__nav__menu__list__item"> <a class="nav__menu__item"  href="#"></a> Estudos</li>
+          <li class="footer__nav__menu__list__item"> <a class="nav__menu__item"  href="#"></a> Proj. prontos</li>
+          <li class="footer__nav__menu__list__item"> <a class="nav__menu__item"  href="#"></a> Desenvolvimento</li>
+        </ul>
+
+        <ul class="footer__nav__menu__list__company">
+          <li class="footer__nav__menu__list__item footer__emphasis">Empresas</li>
+          <li class="footer__nav__menu__list__item"> <a class="nav__menu__item"  href="#"></a> Parceiras</li>
+          <li class="footer__nav__menu__list__item"> <a class="nav__menu__item"  href="#"></a> Clientes</li>
+          <li class="footer__nav__menu__list__item"> <a class="nav__menu__item"  href="#"></a> Experiências</li>
+        </ul>
+      </div>
+
       <div class="footer__nav__icon">
+        <span>siga:</span>
         <ul class="footer__nav__icon__list">
           <li><a href="#" class="icon-github footer__nav__icon__list__item" target="_blank"><span class="hidden"></span></a></li>
           <li><a href="#" class="icon-linkedin2 footer__nav__icon__list__item" target="_blank"><span class="hidden"></span></a></li>
           <li><a href="#" class="icon-behance footer__nav__icon__list__item" target="_blank"><span class="hidden"></span></a></li>
         </ul>        
-      <p class="footer__item"> &#169; 2021 - todos os direitos reservados. | CNPJ: 12.345/0001-67</p>
+      <p class="footer__item"> &#169; 2022 - Thiago Carvalho. | CNPJ: 12.345/0001-67</p>
     </footer>
 
   </main>
