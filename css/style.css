@@ -1,24 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 :root {
-  /* color */
+  /* CORES */
   --primary--color:#222831;
   --secundary--color: #fff; 
   --emphasis--color: #fd7014;
 
-  /* background */
+  /* BACKGROUND */
   --background--primary: #eeeeee;
   --background--secundary: #c7c7c7;
-  /* tamanhos */
-
+  
   /* GRID */
   --size--container: 1408px;
   --grid--container: 1fr minmax(auto, var(--size--container)) 1fr;
-  --grid--photo:1fr auto 1fr;
- 
-  
-  
-  
-  /* fonte */
+  --grid--photo:1fr auto 1fr; 
+    
+  /* FONTE */
   --font--color: #393e46;
   --size--headline: 7.8em;
   --size--subhead: 5.7em;
@@ -26,7 +22,10 @@
   --size--body: 1.8em;
   --size--botton: 2.0em;
   --size--nav: 3em;
+
+  /* ESPAÇAMENTOS */
 }
+
 
 * {
   margin: 0;
