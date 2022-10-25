@@ -117,11 +117,16 @@ h2 {
 }
 
 /* LISTRA ABAIXO DO NAV */
+
+.header__menu__item {
+  position: relative;
+}
+
 .header__menu__item::before {
   content: "";
   position: absolute;
   width: 0;
-  height: 0.2rem;
+  height: 0.5rem;
   left: 0;
   bottom: 0;
   background:var(--emphasis--color);
@@ -177,9 +182,8 @@ h2 {
   grid-column: 2 / 3;
   grid-row: 4 / 6;
   padding: 3rem 0;
-  margin-top: 64px; /* FAZER A TROCA POR rem*/
+  margin-top: 64px; /* FAZER A TROCA POR rem*/  
 }
-
 
 .about__item--text {
   font-size: var(--size--subhead);
@@ -201,7 +205,13 @@ h2 {
 
 .card__skill__list__item {
   color: var(--emphasis--color);  
-  text-align: center; 
+  text-align: center;
+  cursor: pointer;
+}
+
+.card__skill__list__item:hover {
+  scale: 1.1 1.1;
+  box-shadow: 1px 2px 3px var(--input--color);
 }
 
 .icon-bullhorn::before,
@@ -291,12 +301,11 @@ h2 {
 }
 
 .client__testimonial__img {
-  width: 125px;
-  height: 125px;
-  border-radius: 50%;
-  position: relative;
-  left: 87px;
-  bottom: 50px;
+  width: 125px;  
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 50%;  
 }
 
 .client__testimonial__name {
@@ -394,15 +403,14 @@ h2 {
 
 /* FOOTER */
 
-footer {  
-  
+footer {    
   background-color: var(--background--secundary);
 }
 
 .footer__nav {
   height: 420px;
-  grid-column: 2 / 3;
-  grid-row: 10 / 11;
+  grid-column: -1 / -4;
+  grid-row: 10;
 
 }
 
@@ -417,14 +425,14 @@ footer {
 }
 
 .footer__nav__menu__list_contact {
-  grid-column: 2 /3;
+  grid-column: 2/3;
 }
 
 .footer__nav__menu__list__project {
   grid-column: 3/4;
 }
 
-.footer__nav__menu__list__company {
+.footer__nav__menu__list__company {  
   grid-column: 4/5;
 }
 
@@ -458,8 +466,7 @@ footer {
 .footer__nav__icon__list__item {  
   text-decoration: none;  
   color: var(--font--color);
-  font-size: var(--size--subhead);
-  
+  font-size: var(--size--subhead);  
 }
 
 .footer__nav__icon__list__item:hover {
